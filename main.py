@@ -53,7 +53,7 @@ class_mode = 'binary')
 # fit data to model
 classifier.fit_generator(training_set,
 steps_per_epoch = 100,
-epochs = 25,
+epochs = 2,
 validation_data = test_set,
 validation_steps = 2000)
 
