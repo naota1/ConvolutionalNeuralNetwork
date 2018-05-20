@@ -52,13 +52,13 @@ class_mode = 'binary')
 
 # fit data to model
 classifier.fit_generator(training_set,
-steps_per_epoch = 100,
-epochs = 2,
+steps_per_epoch = 8000,
+epochs = 3,
 validation_data = test_set,
 validation_steps = 2000)
 
 # saving weights
-classifier.save("weights.h5")
+classifier.save_weights("weights.h5")
 
 # making predictions
 import numpy as np
@@ -73,4 +73,4 @@ if result[0][0] == 1:
 else:
     prediction = 'cat'
 
-print(result)
+print(prediction)
